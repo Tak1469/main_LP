@@ -1,5 +1,6 @@
-# Webサイト LP制作 『Hike More』
-![HikeMore_top](https://user-images.githubusercontent.com/123624951/215268626-66883486-4e23-473b-bdc1-5e9c9fb316d0.png)
+# Webサイト LP制作 『Portfolio』
+![main_LP-top](https://user-images.githubusercontent.com/123624951/215448688-c789b1ed-aa9c-4a19-8e59-e1dc4e5f9292.png)
+
 ## サイトURL
 http://hikemore.n-taks.com/
 ## インストール方法、始め方
@@ -14,12 +15,11 @@ npm run dev
 
 ## サイト概要
 
-
-LPサイトの基本をイメージしながら作成し、お問い合わせ手段としてemailjsを採用し
+LPサイトの基本をイメージしながら作成しました。
 <br>
 バックグラウンドのエフェクトは資料を参考にして、コードを確認しながら組み上げました。
 <br>
-email.js から
+お問い合わせ機能をemail.jsで構築しました。dotenvを使い、envにて環境変数を設置しております。
 
 
 ## 使用技術
@@ -29,8 +29,9 @@ email.js から
 -   FontAwesome
 -   Webpack
 -   Babel
+-   emailjs
 
 ## 製作者
 N.Tak
 ## LP IMG
-![LP-HikeMore_all](https://user-images.githubusercontent.com/123624951/215268858-d983d408-6b95-434a-9e59-59ed462756ac.png)
+![portfolioSite-all](https://user-images.githubusercontent.com/123624951/215448920-cfffc596-6552-4708-9cc3-51e6333ff46d.png)
