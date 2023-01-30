@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://kit.fontawesome.com/37442f81a6.js" data-auto-replace-svg="nest" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=M+PLUS+1p:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../src/image/favicon/logo.png">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <title>N.Tak's Portfolio</title>
+</head>
+
+<body>
+  <div class="js-loading">
+    <div class="js-spinner"></div>
+  </div>
+  <header class="l-header">
+    <!-- ナビゲーション -->
+    <nav class="l-nav">
+      <ul class="l-nav__menu">
+        <li class="l-menu__item js-add__xline0"><a class="l-menu__link js-add__yline0" href="#Home">HOME</a></li>
+        <li class="l-menu__item js-add__xline1"><a class="l-menu__link js-add__yline1" href="#Works">WORKS</a></li>
+        <li class="l-menu__item js-add__xline2"><a class="l-menu__link js-add__yline2" href="#Skill">SKILL</a></li>
+        <li class="l-menu__item js-add__xline3"><a class="l-menu__link js-add__yline3" href="#About">ABOUT</a></li>
+        <li class="l-menu__item js-add__xline4"><a class="l-menu__link js-add__yline4" href="#Contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <!-- ホーム -->
+    <section id="Home" class="p-container p-hero">
+      <div class="p-wrapper">
+      </div>
+
+      <!-- タイトル -->
+      <div>
+        <h1 class="p-hero__title">N.Tak</h1>
+        <h2 class="p-hero__desc">portfolio</h2>
+      </div>
+    </section>
+
+    <!-- ワークスセクション -->
+    <section id="Works" class="p-container p-container__large">
+      <h1 class="c-section__title">Works</h1>
+      <div class="p-works">
+        <div class="p-works__list js-modal-open" data-id="1">
+          <img class="p-works__img" src="./image/site-img/maiin-LP_top-img.png" alt="deliverables">
+          <div class="p-works__mask">
+            <div class="p-works__details">
+              <h3 class="p-works__text p-works__title">ベースポートフォリオ</h3>
+              <span class="p-works__line"></span>
+              <p class="p-works__text">現在ご覧いただいているページになります。</p>
+            </div>
+            <div class="p-works__language">
+              <img class="p-works__language-item" src="./image/skill_image/file_type_html_icon_130541.svg" alt="HTML">
+              <img class="p-works__language-item" src="./image/skill_image/file_type_css_icon_130661.svg" alt="CSS">
+              <img class="p-works__language-item" src="./image/skill_image/webpack_original_logo_icon_146300.svg"
+                alt="WEBPACK">
+              <img class="p-works__language-item" src="./image/skill_image/file_type_scss_icon_130177.svg" alt="SCSS">
+              <img class="p-works__language-item"
+                src="./image/skill_image/jquery_original_wordmark_logo_icon_146447.svg" alt="jQuery">
+              <img class="p-works__language-item" src="./image/skill_image/github_git_icon_145985.svg" alt="git">
+            </div>
+          </div>
+        </div>
+        <div class="p-works__list js-modal-open" data-id="2">
+          <img class="p-works__img" src="./image/site-img/HikeMore_top.png" alt="deliverables">
+          <div class="p-works__mask">
+            <div class="p-works__details">
+              <h3 class="p-works__text p-works__title">トレッキングガイドをイメージした Webサイト</h3>
+              <span class="p-works__line"></span>
+              <div class="p-works__language">
+                <img class="p-works__language-item" src="./image/skill_image/file_type_html_icon_130541.svg" alt="HTML">
+                <img class="p-works__language-item" src="./image/skill_image/file_type_css_icon_130661.svg" alt="CSS">
+                <img class="p-works__language-item" src="./image/skill_image/webpack_original_logo_icon_146300.svg"
+                  alt="WEBPACK">
+                <img class="p-works__language-item" src="./image/skill_image/file_type_scss_icon_130177.svg" alt="SCSS">
+                <img class="p-works__language-item" src="./image/skill_image/icons8-javascript-96.svg" alt="js">
+                <img class="p-works__language-item" src="./image/skill_image/github_git_icon_145985.svg" alt="git">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-works__list js-modal-open" data-id="3">
+          <img class="p-works__img" src="./image/site-img/shop_wp.png" alt="deliverables">
+          <div class="p-works__mask">
+            <div class="p-works__details">
+              <h3 class="p-works__text p-works__title">シューズショップのコーポレートサイトをイメージした Webサイト</h3>
+              <span class="p-works__line"></span>
+              <div class="p-works__language">
+                <img class="p-works__language-item" src="./image/skill_image/file_type_html_icon_130541.svg" alt="HTML">
+                <img class="p-works__language-item" src="./image/skill_image/file_type_css_icon_130661.svg" alt="CSS">
+                <img class="p-works__language-item" src="./image/skill_image/webpack_original_logo_icon_146300.svg"
+                  alt="WEBPACK">
+                <img class="p-works__language-item" src="./image/skill_image/file_type_scss_icon_130177.svg" alt="SCSS">
+                <img class="p-works__language-item" src="./image/skill_image/icons8-javascript-96.svg" alt="js">
+                <img class="p-works__language-item" src="./image/skill_image/icons8-wordpress.svg" alt="wordpress">
+                <img class="p-works__language-item" src="./image/skill_image/github_git_icon_145985.svg" alt="git">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-works__list js-modal-open" data-id="4">
+          <img class="p-works__img" src="./image/site-img/comingSoon2.jpeg" alt="deliverables">
+          <div class="p-works__mask">
+            <div class="p-works__details">
+              <h3 class="p-works__text p-works__title">comingSoon</h3>
+              <span class="p-works__line"></span>
+              <p class="p-works__text">準備中です。</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-works__list js-modal-open" data-id="5">
+          <img class="p-works__img" src="./image/site-img/comingSoon2.jpeg" alt="deliverables">
+          <div class="p-works__mask">
+            <div class="p-works__details">
+              <h3 class="p-works__text p-works__title">comingSoon</h3>
+              <span class="p-works__line"></span>
+              <p class="p-works__text">準備中です。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- スキル一覧 -->
+    <section id="Skill" class="p-container p-container__large">
+      <h1 class="c-section__title">Skill</h1>
+      <div class="p-skill">
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/file_type_html_icon_130541.svg" alt="HTML"
+                width="300" height="100%">
+              <img class="p-skill__img-item" src="./image/skill_image/file_type_css_icon_130661.svg" alt="CSS"
+                width="300" height="100%">
+            </div>
+            <h2 class="p-skill__title">HTML & CSS</h2>
+            <span class="p-skill__line"></span>
+            <p class="p-skill__text">基礎を押さえ,見やすいコードを書くことを心がけてます。</p>
+          </div>
+        </div>
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/javascript_original_logo_icon_146455.svg"
+                alt="HTML" width="300" height="100%">
+            </div>
+            <h2 class="p-skill__title">Javascript</h2>
+            <span class="p-skill__line"></span>
+            <p class="p-skill__text">ES2015から学び始め自身の作りたいアプリケーションを作る上で必要な処理、非同期処理やAjaxなどを学びました。</p>
+          </div>
+        </div>
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/php_icon_130857.svg" alt="HTML" width="300"
+                height="100%">
+              <img class="p-skill__img-item" src="./image/skill_image/mysqlworkbench_93532.svg" alt="CSS" width="300"
+                height="100%">
+            </div>
+            <h2 class="p-skill__title">PHP</h2>
+            <span class="p-skill__line"></span>
+            <p class="p-skill__text">バックエンドの基礎、CRUD処理を行うためにこの二つをセットで学習しました。</p>
+          </div>
+        </div>
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/icons8-wordpress.svg" alt="WordPress" width="300"
+                height="100%">
+            </div>
+            <h2 class="p-skill__title">WordPress</h2>
+            <span class="p-skill__line">表示画面・管理画面のカスタマイズを学び、基礎の流れを掴みました。</span>
+            <p class="p-skill__text"></p>
+          </div>
+        </div>
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/jquery_original_wordmark_logo_icon_146447.svg"
+                alt="HTML" width="300" height="100%">
+            </div>
+            <h2 class="p-skill__title">jQuery</h2>
+            <span class="p-skill__line"></span>
+            <p class="p-skill__text">Webベージの作成などで多く使われている上で、学びました。</p>
+          </div>
+        </div>
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/file_type_scss_icon_130177.svg" alt="HTML"
+                width="300" height="100%">
+            </div>
+            <h2 class="p-skill__title">SCSS</h2>
+            <span class="p-skill__line"></span>
+            <p class="p-skill__text">コードの読みやすさと改善のしやすさを学びました。このページでは『FLOCSS』を使用しております。</p>
+          </div>
+        </div>
+        <div class="p-skill__language">
+          <div class="p-glass">
+            <div class="p-skill__img">
+              <img class="p-skill__img-item" src="./image/skill_image/react_original_logo_icon_146374.svg" alt="HTML"
+                width="300" height="100%">
+            </div>
+            <h2 class="p-skill__title">React</h2>
+            <span class="p-skill__line"></span>
+            <p class="p-skill__text">Webサイトを作る上でAtomicDesignを使ってReactコンポーネントの設計を学んでいます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 自己紹介 -->
+    <section id="About" class="p-container p-container__large p-about">
+      <h1 class="c-section__title">About me</h1>
+      <div class="p-about__text">
+        <h3 class="p-about__sub-title">
+          ご覧いただいてありがとうございます。
+        </h3>
+        <p class="p-about__contents">
+          飲食店で店長業務にあたり店舗運営管理を行ったのち、靴の販売・店長業務・取引先様との商談などをしております。
+          多くの企業様と関わり、商品のPRや在庫管理を行う中でエクセルでマクロを組み、データ処理に貢献したことなどがIT業界への興味を持つきっかけとなりました。<br>
+          Webページの作成や、React/laravelを使いアプリを作りを引き続き学んでおります。
+        </p>
+      </div>
+    </section>
+
+    <!-- 連絡用セクション -->
+    <section id="Contact" class="p-container p-container__middle p-contact">
+      <h1 class="c-section__title">Contact</h1>
+
+      <form id="contact-form" class="p-contact__form js-form">
+        <div class="">
+          <input type="hidden" name="contact_number">
+          <label>お名前(必須)</label>
+          <input id="test" class="c-contact__data js-valid-name" autocomplete="name" name="user_name" required>
+          <label>メールアドレス(必須)</label>
+          <input class="c-contact__data js-valid-email" type="email" name="user_email" required>
+        </div>
+        <div class="">
+          <label>お問い合わせ内容(必須)</label>
+          <textarea class="c-contact__text js-valid-text" type="text" name="message" required></textarea>
+          <input class="p-contact__submit c-btn js-cursor js-email-result" type="submit" value="送信">
+        </div>
+      </form>
+
+      <div class="p-contact__modal js-contact-modal">
+        <div class="p-contact__modal-body">
+          <div class="p-contact__success js-success">
+            <i class="p-contact__success-icon fas fa-check-circle"></i>
+            <p class="p-contact__success-text">送信されました。</p>
+          </div>
+          <div class="p-contact__error js-error">
+            <i class="fas fa-times p-contact__close js-closed"></i>
+            <i class="p-contact__error-icon fas fa-exclamation"></i>
+            <p class="p-contact__error-text">送信に失敗しました。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- モーダル本体 -->
+    <section class="modal">
+      <div class="p-modal__container js-modal-container" data-id="modal1">
+        <div class="p-modal__body p-container__large js-modal-body">
+          <i class="fa fa-times p-modal__close js-modal-close" data-id="1"></i>
+          <div class="js-modal-content">
+            <div class="p-modal__item">
+              <h2 class="p-modal__title">ポートフォリオサイト</h2>
+              <div class="p-modal__desc">
+                <h3 class="p-modal__sub-title">サイトについて</h3>
+                <p>ポートフォリオ公開に伴い、自己紹介サイトを作りました。</p>
+                <p>一覧で見やすく、重くなく、凝りすぎないように心がけました。</p>
+              </div>
+              <ul>
+                <li class="p-modal__item-title">使用技術</li>
+                <li><i class="fas fa-check-circle"></i>jQuery</li>
+                <li><i class="fas fa-check-circle"></i>HTML5/CSS3</li>
+                <li><i class="fas fa-check-circle"></i>scss</li>
+                <li><i class="fas fa-check-circle"></i>webpack</li>
+                <li><i class="fas fa-check-circle"></i>emailJS</li>
+                <li><i class="fas fa-check-circle"></i>xserver</li>
+              </ul>
+              <div class="p-modal__img">
+                <img src="./image/site-img/portfolioSite-res.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-modal__container js-modal-container" data-id="modal2">
+        <div class="p-modal__body p-container__large js-modal-body">
+          <i class="fa fa-times p-modal__close js-modal-close" data-id="2"></i>
+          <div class="js-modal-content">
+            <div class="p-modal__item">
+              <h2 class="p-modal__title">HikeMore!!</h2>
+              <div class="p-modal__desc">
+                <h3 class="p-modal__sub-title">サイトについて</h3>
+                <p>トレッキングガイドのイメージで作成いたしました。</p>
+                <p>登山のイメージだけでなく自然を満喫できるという気持ちがおこしていくようにシンプルに仕上げました。</p>
+              </div>
+              <ul>
+                <li class="p-modal__item-title">使用技術</li>
+                <li><i class="fas fa-check-circle"></i>HTML5/CSS3</li>
+                <li><i class="fas fa-check-circle"></i>Javascript</li>
+                <li><i class="fas fa-check-circle"></i>Sass</li>
+                <li><i class="fas fa-check-circle"></i>webpack</li>
+                <li><i class="fas fa-check-circle"></i>xserver</li>
+              </ul>
+              <div class="p-modal__link">
+                <a class="c-btn" href="http://hikemore.n-taks.com/">view</a>
+              </div>
+              <div class="p-modal__img">
+                <img src="./image/site-img/LP-HikeMore_all.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-modal__container js-modal-container" data-id="modal3">
+        <div class="p-modal__body p-container__large js-modal-body">
+          <i class="fa fa-times p-modal__close js-modal-close" data-id="3"></i>
+          <div class="js-modal-content">
+            <div class="p-modal__item">
+              <h2 class="p-modal__title">Vari Colori</h2>
+              <div class="p-modal__desc">
+                <h3 class="p-modal__sub-title">サイトについて</h3>
+                <p>清潔感とシンプルなイメージでシューズショップのコーポレートサイトを作りました。</p>
+                <p>見る人にどういったイメージを持って欲しいかパッと見てすぐに操作できるような配置を心がけました。</p>
+              </div>
+              <ul>
+                <li class="p-modal__item-title">使用技術</li>
+                <li><i class="fas fa-check-circle"></i>HTML5/CSS3</li>
+                <li><i class="fas fa-check-circle"></i>Javascript</li>
+                <li><i class="fas fa-check-circle"></i>Sass</li>
+                <li><i class="fas fa-check-circle"></i>webpack</li>
+                <li><i class="fas fa-check-circle"></i>WordPress</li>
+                <li><i class="fas fa-check-circle"></i>xserver</li>
+              </ul>
+              <div class="p-modal__link">
+                <a class="c-btn" href="https://varicolori.n-taks.com/">view</a>
+              </div>
+              <div class="p-modal__img">
+                <img src="./image/site-img/shop_wp.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-modal__container js-modal-container" data-id="modal4">
+        <div class="p-modal__body p-container__large js-modal-body">
+          <i class="fa fa-times p-modal__close js-modal-close" data-id="4"></i>
+          <div class="p-modal__preparation js-modal-content">
+            <h2 class="p-modal__title">ただいま作成中です。</h2>
+          </div>
+        </div>
+      </div>
+      <div class="p-modal__container js-modal-container" data-id="modal5">
+        <div class="p-modal__body p-container__large js-modal-body">
+          <i class="fa fa-times p-modal__close js-modal-close" data-id="5"></i>
+          <div class="p-modal__preparation js-modal-content">
+            <h2 class="p-modal__title">ただいま作成中です。</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!-- フッター -->
+  <footer class="l-footer">© 2021 Nagano Takahiro</footer>
+</body>
+
+</html>

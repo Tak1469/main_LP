@@ -1,0 +1,10 @@
+@use "../../foundation/base" as b;
+
+.c-section__title {
+  font-family: b.$font-family_title;
+  font-size: 40px;
+  margin-bottom: 32px;
+  @include b.md(){
+    font-size: 28px;
+  }
+}

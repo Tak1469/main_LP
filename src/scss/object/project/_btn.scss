@@ -1,0 +1,15 @@
+@use "../../foundation/base" as b;
+
+.c-btn {
+  padding: 12px 24px;
+  background: #fff;
+  color: b.$font-color_default;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  &:hover {
+    background: #0096a76e;
+    color: #fff;
+    transition: 0.3s;
+  }
+}

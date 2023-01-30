@@ -1,0 +1,9 @@
+@use "../../scss/foundation/base" as b;
+
+.l-footer {
+  margin: 32px auto;
+  text-align: center;
+  @include b.md(){
+    font-size: 12px;
+  }
+}
