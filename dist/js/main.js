@@ -152,20 +152,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var EMAILJS_PUBLIC_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.PUBLIC_KEY;
 var EMAILJS_SERVICE_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.SERVICE_KEY;
-var EMAILJS_TEMPLATE_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.TEMPLATE_KEY; // if (EMAILJS_PUBLIC_KEY === undefined || EMAILJS_SERVICE_KEY === undefined || EMAILJS_TEMPLATE_KEY === undefined) {
-//   throw new Error("環境変数不足エラー");
-// }
+var EMAILJS_TEMPLATE_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.TEMPLATE_KEY;
+
+if (EMAILJS_PUBLIC_KEY === undefined || EMAILJS_SERVICE_KEY === undefined || EMAILJS_TEMPLATE_KEY === undefined) {
+  throw new Error("環境変数不足エラー");
+}
 
 var getEmailjsPublicKey = function getEmailjsPublicKey() {
-  console.log(EMAILJS_PUBLIC_KEY);
   return EMAILJS_PUBLIC_KEY;
 };
 var getEmailjsServiceKey = function getEmailjsServiceKey() {
-  console.log(EMAILJS_SERVICE_KEY);
   return EMAILJS_SERVICE_KEY;
 };
 var getEmailjsTemplateKey = function getEmailjsTemplateKey() {
-  console.log(EMAILJS_TEMPLATE_KEY);
   return EMAILJS_TEMPLATE_KEY;
 };
 
