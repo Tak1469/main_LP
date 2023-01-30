@@ -1,9 +1,13 @@
+const webpack = require('webpack');
 const { ProvidePlugin } = require('webpack');
 const path = require('path');
+const dotenv = require("dotenv");
 // webpack5 推薦のESlint プラグイン
 const ESLintPlugin = require('eslint-webpack-plugin');
 // CSSファイルをjsにまとめずに外出しにするプラグイン
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// envファイル読み込みプラグイン
+const env = dotenv.config().parsed;
 
 module.exports = ({ outputFile, assetFile }) => ({
   // mode: 開発用 development、本番用productと分ける
@@ -96,7 +100,17 @@ module.exports = ({ outputFile, assetFile }) => ({
       // jqueryの場合
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }),
+    // envファイル確認処理
+    env !== undefined
+      ? new webpack.DefinePlugin({
+        "process.env": JSON.stringify(env),
+      })
+      : new webpack.DefinePlugin({
+        "process.env.PUBLIC_KEY": JSON.stringify(process.env.PUBLIC_KEY),
+        "process.env.SERVICE_KEY": JSON.stringify(process.env.SERVICE_KEY),
+        "process.env.TEMPLATE_KEY": JSON.stringify(process.env.TEMPLATE_KEY),
+      })
   ],
   // ES5(IE11等)向けの指定（webpack 5以上で必要）
   target: ["web", "es5"],

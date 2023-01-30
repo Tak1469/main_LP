@@ -63,9 +63,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "emailJs": function() { return /* binding */ emailJs; }
 /* harmony export */ });
+/* harmony import */ var _env__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./env */ "./src/js/env.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
 function emailJs() {
-  // フォームのバリデーション submimt操作
+  // 環境変数取得
+  var EmailjsPublicKey = (0,_env__WEBPACK_IMPORTED_MODULE_0__.getEmailjsPublicKey)();
+  var EmailjsServiceKey = (0,_env__WEBPACK_IMPORTED_MODULE_0__.getEmailjsServiceKey)();
+  var EmailjsTemplateKey = (0,_env__WEBPACK_IMPORTED_MODULE_0__.getEmailjsTemplateKey)(); // フォームのバリデーション submimt操作
+
   var form = $('.js-form');
   var modal = $(".js-contact-modal");
   var success = $(".js-success");
@@ -74,7 +80,6 @@ function emailJs() {
   $('.js-closed').on('click', function () {
     modal.fadeOut();
     form.delay(500).fadeIn();
-    console.log('no');
     success.hidden();
     error.hidden();
   }); // 送信成功時のアイコン表示
@@ -95,7 +100,6 @@ function emailJs() {
 
   window.onload = function () {
     var $contactSubmit = $('.js-cursor');
-    console.log($contactSubmit);
     $contactSubmit.css('cursor', 'not-allowed');
     $contactSubmit.disabled = true; // contactフォームの送信ボタン処理
 
@@ -112,12 +116,12 @@ function emailJs() {
       }
     }); // emailjsの処理
 
-    emailjs.init("user_PmS1DpctqPvItVYtjhgg2");
+    emailjs.init(EmailjsPublicKey);
     var FormEle = document.getElementById('contact-form');
     FormEle.addEventListener('submit', function (event) {
       event.preventDefault();
       this.contact_number.value = Math.random() * 100000 | 0;
-      emailjs.sendForm('service_hfqvzfx', 'template_yf3wu3d', this) // 送信成功
+      emailjs.sendForm(EmailjsServiceKey, EmailjsTemplateKey, this) // 送信成功
       .then(function () {
         // input クリア
         form[0][1].value = '';
@@ -130,6 +134,40 @@ function emailJs() {
     });
   };
 }
+
+/***/ }),
+
+/***/ "./src/js/env.js":
+/*!***********************!*\
+  !*** ./src/js/env.js ***!
+  \***********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getEmailjsPublicKey": function() { return /* binding */ getEmailjsPublicKey; },
+/* harmony export */   "getEmailjsServiceKey": function() { return /* binding */ getEmailjsServiceKey; },
+/* harmony export */   "getEmailjsTemplateKey": function() { return /* binding */ getEmailjsTemplateKey; }
+/* harmony export */ });
+var EMAILJS_PUBLIC_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.PUBLIC_KEY;
+var EMAILJS_SERVICE_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.SERVICE_KEY;
+var EMAILJS_TEMPLATE_KEY = {"PUBLIC_KEY":"user_PmS1DpctqPvItVYtjhgg2","SERVICE_KEY":"service_hfqvzfx","TEMPLATE_KEY":"template_yf3wu3d"}.TEMPLATE_KEY; // if (EMAILJS_PUBLIC_KEY === undefined || EMAILJS_SERVICE_KEY === undefined || EMAILJS_TEMPLATE_KEY === undefined) {
+//   throw new Error("環境変数不足エラー");
+// }
+
+var getEmailjsPublicKey = function getEmailjsPublicKey() {
+  console.log(EMAILJS_PUBLIC_KEY);
+  return EMAILJS_PUBLIC_KEY;
+};
+var getEmailjsServiceKey = function getEmailjsServiceKey() {
+  console.log(EMAILJS_SERVICE_KEY);
+  return EMAILJS_SERVICE_KEY;
+};
+var getEmailjsTemplateKey = function getEmailjsTemplateKey() {
+  console.log(EMAILJS_TEMPLATE_KEY);
+  return EMAILJS_TEMPLATE_KEY;
+};
 
 /***/ }),
 
@@ -146,9 +184,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 function headerScroll() {
-  // $(window).bind("scroll",function() {
-  //   console.log("scrollY: " + scrollY + "\n" );
-  // })
   $(window).on('scroll', function () {
     if ($('.l-header').height() < $(this).scrollTop()) {
       $('.l-header').addClass('js-add-backgroundcolor');
@@ -277,14 +312,11 @@ function modalWork() {
     });
     $('html').css({
       'overflow-y': 'hidden'
-    }); // $('.main').css({
-    //   'margin-right': '10px',
-    // });
+    });
   });
   $close.on('click', function () {
     var id = $(this).data('id');
     var showModal = $('.js-modal-container[data-id="modal' + id + '"]');
-    console.log(showModal);
     showModal.css({
       'visibility': 'hidden',
       'opacity': '0',
@@ -292,9 +324,7 @@ function modalWork() {
     });
     $('html').css({
       'overflow-y': 'auto'
-    }); // $('.main').css({
-    //   'margin-right': '0px',
-    // });
+    });
   });
 }
 

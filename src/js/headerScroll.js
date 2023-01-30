@@ -1,7 +1,4 @@
 export function headerScroll() {
-  // $(window).bind("scroll",function() {
-  //   console.log("scrollY: " + scrollY + "\n" );
-  // })
 
   $(window).on('scroll', function () {
     if($('.l-header').height() < $(this).scrollTop()){

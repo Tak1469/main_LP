@@ -1,4 +1,10 @@
+import { getEmailjsPublicKey, getEmailjsServiceKey, getEmailjsTemplateKey } from "./env";
+
 export function emailJs() {
+  // 環境変数取得
+  const EmailjsPublicKey = getEmailjsPublicKey();
+  const EmailjsServiceKey = getEmailjsServiceKey();
+  const EmailjsTemplateKey = getEmailjsTemplateKey();
   // フォームのバリデーション submimt操作
   const form = $('.js-form');
   const modal = $(".js-contact-modal");
@@ -6,10 +12,9 @@ export function emailJs() {
   const error = $(".js-error");
 
   // 送信失敗時のcloseボタン
-  $('.js-closed').on('click', function(){
+  $('.js-closed').on('click', function () {
     modal.fadeOut();
     form.delay(500).fadeIn();
-    console.log('no');
     success.hidden();
     error.hidden();
   });
@@ -29,7 +34,6 @@ export function emailJs() {
   // メール入力処理
   window.onload = function () {
     const $contactSubmit = $('.js-cursor');
-    console.log($contactSubmit);
     $contactSubmit.css('cursor', 'not-allowed');
     $contactSubmit.disabled = true;
     // contactフォームの送信ボタン処理
@@ -39,7 +43,7 @@ export function emailJs() {
         $contactSubmit.disabled = false;
         $contactSubmit.css('cursor', 'pointer');
         return;
-      }else{
+      } else {
         $contactSubmit.css('cursor', 'not-allowed');
         $contactSubmit.disabled = true;
       }
@@ -47,13 +51,13 @@ export function emailJs() {
 
 
     // emailjsの処理
-    emailjs.init("user_PmS1DpctqPvItVYtjhgg2");
+    emailjs.init(EmailjsPublicKey);
 
     const FormEle = document.getElementById('contact-form');
     FormEle.addEventListener('submit', function (event) {
       event.preventDefault();
       this.contact_number.value = Math.random() * 100000 | 0;
-      emailjs.sendForm('service_hfqvzfx', 'template_yf3wu3d', this)
+      emailjs.sendForm(EmailjsServiceKey, EmailjsTemplateKey, this)
         // 送信成功
         .then(function () {
           // input クリア

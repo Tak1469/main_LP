@@ -13,15 +13,11 @@ export function modalWork() {
     $('html').css({
       'overflow-y': 'hidden',
     });
-    // $('.main').css({
-    //   'margin-right': '10px',
-    // });
   });
 
   $close.on('click', function(){
     let id = $(this).data('id');
     let showModal = $('.js-modal-container[data-id="modal' + id + '"]');
-    console.log(showModal);
     showModal.css({
       'visibility': 'hidden',
       'opacity': '0',
@@ -30,9 +26,6 @@ export function modalWork() {
     $('html').css({
       'overflow-y': 'auto',
     });
-    // $('.main').css({
-    //   'margin-right': '0px',
-    // });
   });
 
 }
