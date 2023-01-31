@@ -33,5 +33,6 @@ LPサイトの基本をイメージしながら作成しました。
 
 ## 製作者
 N.Tak
+ご連絡先 nezimakidance@gmail.com
 ## LP IMG
 ![portfolioSite-all](https://user-images.githubusercontent.com/123624951/215448920-cfffc596-6552-4708-9cc3-51e6333ff46d.png)
