@@ -2,7 +2,7 @@
 ![main_LP-top](https://user-images.githubusercontent.com/123624951/215448688-c789b1ed-aa9c-4a19-8e59-e1dc4e5f9292.png)
 
 ## サイトURL
-https://portfolio.n-taks.com/
+http://www.main.n-taksan.com/
 ## インストール方法、始め方
 以下のコマンドを実行して、表示できます。
 
