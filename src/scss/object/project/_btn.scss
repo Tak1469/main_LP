@@ -10,6 +10,11 @@
   &:hover {
     background: #0096a76e;
     color: #fff;
-    transition: 0.3s;
+  }
+  &__git {
+    &:hover {
+      background: #5b5b5b8d;
+      color: #fff;
+    }
   }
 }
